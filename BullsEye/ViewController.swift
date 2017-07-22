@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        startNewRound()
+        startNewGame()
         updateLabels()
     }
 
@@ -59,14 +59,15 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            action in
+            self.startNewRound()
+            self.updateLabels()
+        })
         
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
-        startNewRound()
-        updateLabels()
     }
     
     
@@ -74,11 +75,23 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
     }
     
+    @IBAction func startOver() {
+        startNewGame()
+        updateLabels()
+    }
+    
     func startNewRound() {
         targetValue = 1 + Int(arc4random_uniform(100))
         currentValue = 50
         slider.value = Float(currentValue)
         round += 1
+    }
+    
+    func startNewGame() {
+        score = 0
+        round = 0
+        
+        startNewRound()
     }
     
     func updateLabels() {
