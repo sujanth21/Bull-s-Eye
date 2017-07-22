@@ -31,7 +31,11 @@ class ViewController: UIViewController {
     
     @IBAction func showAlert() {
         
-        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)"
+        let differece = abs(currentValue - targetValue)
+       
+        let message = "The value of the slider is: \(currentValue)" +
+                      "\nThe target value is: \(targetValue)" +
+                      "\nThe difference is \(differece)"
         
         let alert = UIAlertController(title: "Hello, World!", message: message, preferredStyle: .alert)
         
@@ -58,7 +62,6 @@ class ViewController: UIViewController {
     
     func updateLabels() {
         targetLabel.text = String(targetValue)
-        print(targetValue)
     }
 
 
