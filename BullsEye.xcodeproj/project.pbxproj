@@ -12,6 +12,7 @@
 		8391607F1F2163E5009D358A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391607D1F2163E5009D358A /* Main.storyboard */; };
 		839160811F2163E5009D358A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839160801F2163E5009D358A /* Assets.xcassets */; };
 		839160841F2163E5009D358A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839160821F2163E5009D358A /* LaunchScreen.storyboard */; };
+		8391608C1F22F107009D358A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391608B1F22F107009D358A /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		839160801F2163E5009D358A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		839160831F2163E5009D358A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839160851F2163E5009D358A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8391608B1F22F107009D358A /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				839160791F2163E5009D358A /* AppDelegate.swift */,
 				8391607B1F2163E5009D358A /* ViewController.swift */,
+				8391608B1F22F107009D358A /* AboutViewController.swift */,
 				8391607D1F2163E5009D358A /* Main.storyboard */,
 				839160801F2163E5009D358A /* Assets.xcassets */,
 				839160821F2163E5009D358A /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8391608C1F22F107009D358A /* AboutViewController.swift in Sources */,
 				8391607C1F2163E5009D358A /* ViewController.swift in Sources */,
 				8391607A1F2163E5009D358A /* AppDelegate.swift in Sources */,
 			);
