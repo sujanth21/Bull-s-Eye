@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -26,6 +27,27 @@ class ViewController: UIViewController {
         
         startNewGame()
         updateLabels()
+        
+        
+        //Slider UI Changes
+        let thumbImageNormal = #imageLiteral(resourceName: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumImageHighlighted = #imageLiteral(resourceName: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackLeftImage = #imageLiteral(resourceName: "SliderTrackLeft")
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        
+        let trackRightImage = #imageLiteral(resourceName: "SliderTrackRight")
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,6 +100,13 @@ class ViewController: UIViewController {
     @IBAction func startOver() {
         startNewGame()
         updateLabels()
+        
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        view.layer.add(transition, forKey: nil)
     }
     
     func startNewRound() {
