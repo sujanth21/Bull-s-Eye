@@ -306,6 +306,7 @@
 				8391608A1F2163E5009D358A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
